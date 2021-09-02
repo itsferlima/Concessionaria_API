@@ -27,6 +27,11 @@ namespace API
         public void ConfigureServices(IServiceCollection services)
         {
 
+             services.AddMvc();
+    
+            services.AddScoped<StoreDataContext, StoreDataContext>();
+            services.AddTransient<ProductRepository, ProductRepository>();
+
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {

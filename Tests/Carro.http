@@ -3,7 +3,7 @@ POST https://localhost:5001/api/carro/create
 Content-Type: application/json
 
 {
-    "Marca" : "Ford",
+    "Marca" : "Uno",
     "Valor" : 30.000
 }
 
@@ -16,7 +16,7 @@ GET https://localhost:5001/api/carro/localhost:5001/api/produto/getbyid/1
 
 
 ###Deletar pelo nome
-GET https://localhost:5001/api/carro/delete/fox
+GET https://localhost:5001/api/carro/delete/uno
 
 ###Editar carro
 PUT https://localhost:5001/api/carro/update 
@@ -24,6 +24,6 @@ Content-Type: application/json
 
 {
     "Id": 1,
-    "Nome": "Fox verde",
+    "Nome": "Uno verde",
     "Valor": 50.000
 }
