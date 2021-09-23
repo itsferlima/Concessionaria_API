@@ -3,8 +3,8 @@ POST https://localhost:5001/api/carro/create
 Content-Type: application/json
 
 {
-    "Marca" : "Fusca",
-    "Valor" : 3.000
+    "Marca" : "FORD",
+    "Valor" : 1.000
 }
 
 
