@@ -63,7 +63,7 @@ namespace API
 
             app.UseCors("CorsPolicy"); // tem q vir aq no inicio antes dop http
 
-            app.UseHttpsRedirection();
+            //app.UseHttpsRedirection();
 
             app.UseRouting();
 
