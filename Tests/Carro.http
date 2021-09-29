@@ -3,8 +3,8 @@ POST https://localhost:5001/api/carro/create
 Content-Type: application/json
 
 {
-    "Marca" : "fox",
-    "Valor" : 1.000
+    "Marca" : "gol",
+    "Valor" : 60.000
 }
 
 
@@ -12,18 +12,18 @@ Content-Type: application/json
 GET https://localhost:5001/api/carro/list 
 
 ###Buscar pela ID
-GET https://localhost:5001/api/carro/localhost:5001/api/produto/getbyid/1
+GET https://localhost:5001/api/carro/getbyid/3
 
 
-###Deletar pelo nome
-GET https://localhost:5001/api/carro/delete/uno
+###Deletar pela marca
+GET https://localhost:5001/api/carro/delete/monza
 
 ###Editar carro
 PUT https://localhost:5001/api/carro/update 
 Content-Type: application/json
 
 {
-    "Id": 1,
-    "Nome": "Uno verde",
+    "Id": 3,
+    "Marca": "astra",
     "Valor": 50.000
 }

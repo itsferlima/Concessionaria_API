@@ -47,6 +47,20 @@ namespace API.Controllers
             return Ok(carro);
         }
 
+        //GET :api/carro/getbyid/1
+        [HttpGet]
+        [Route ("getbybuyid/{buyId}")]
+        public IActionResult GetByBuyId([FromRoute] int buyId)
+        {
+            var carros = _context.Carros.Where(carro => carro.BuyId == buyId).ToArray();
+            if(carros.Length ==0)
+            {
+                return NotFound();
+            }
+            return Ok(carros);
+        }
+
+
         //DELETE: api/carro/delete/Fox
         [HttpDelete]
         [Route("delete/{marca}")]// ver esse name ou marca
