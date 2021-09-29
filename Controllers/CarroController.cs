@@ -47,7 +47,8 @@ namespace API.Controllers
             return Ok(carro);
         }
 
-        //GET :api/carro/getbyid/1
+        //GET :api/carro/getbyid/1 
+        //relacionamento 
         [HttpGet]
         [Route ("getbybuyid/{buyId}")]
         public IActionResult GetByBuyId([FromRoute] int buyId)

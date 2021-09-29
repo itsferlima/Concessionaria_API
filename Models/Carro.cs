@@ -8,7 +8,7 @@ namespace API.Models
         public int Id {get; set;}
         public string Marca {get; set;}
         public double Valor {get; set;}
-        public int BuyId {get; set;}
+        public int BuyId {get; set;}  // relacionamento 
         public DateTime CriadoEm {get; set;}
 
         public override string ToString() =>
