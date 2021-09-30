@@ -63,23 +63,42 @@ namespace API.Controllers
 
 
         //DELETE: api/carro/delete/Fox
+        // [HttpDelete]
+        // [Route("delete/{marca}")]// ver esse name ou marca
+        // public IActionResult Delete ([FromRoute] string marca)
+        // {
+        //     Carro carro = _context.Carros.FirstOrDefault(carro => carro.Marca == marca);
+
+        //     if(carro == null)
+        //     {
+        //         return NotFound();    
+        //     }
+        //     _context.Carros.Remove(carro);
+        //     _context.SaveChanges();
+        //     return Ok(_context.Carros.ToList());
+        // }
+
         [HttpDelete]
-        [Route("delete/{marca}")]// ver esse name ou marca
-        public IActionResult Delete ([FromRoute] string marca)
+        [Route("delete/{marca}")]
+        public IActionResult Delete([FromRoute] string marca)
         {
+            //Expressão lambda
+            //Buscar um objeto na tabela de produtos com base no nome
             Carro carro = _context.Carros.FirstOrDefault(carro => carro.Marca == marca);
 
-            if(carro == null)
+            if (carro == null)
             {
-                return NotFound();    
+                return NotFound();
             }
             _context.Carros.Remove(carro);
             _context.SaveChanges();
             return Ok(_context.Carros.ToList());
         }
 
+
+
         //PUT api/carro/update
-        [HttpPut]
+        [HttpDelete]
         [Route("update")]
         public IActionResult Update ([FromBody] Carro carro)
         {
