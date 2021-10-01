@@ -50,10 +50,10 @@ namespace API.Controllers
 
         //DELETE: api/usuario/delete/Felipe
         [HttpDelete]
-        [Route("delete/{nome}")]// ver esse name ou marca
-        public IActionResult Delete ([FromRoute] string nome)
+        [Route("delete/{id}")]// ver esse name ou marca
+        public IActionResult Delete ([FromRoute] int Id )
         {
-            Usuario usuario = _context.Usuarios.FirstOrDefault(usuario =>usuario.Nome == nome);
+            Usuario usuario = _context.Usuarios.FirstOrDefault(usuario =>usuario.Id == Id);
 
             if(usuario == null)
             {
@@ -75,4 +75,3 @@ namespace API.Controllers
         }    
     }
 }
-

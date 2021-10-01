@@ -41,8 +41,8 @@ Content-Type: application/json
 ###listar
 GET https://localhost:5001/api/usuario/list
 
-###deletrar pelo nome
-DELETE  https://localhost:5001/api/usuario/delete/felipe
+###deletrar pelo id 
+DELETE  https://localhost:5001/api/usuario/delete/1
 
 ###buscar pelo id
 GET https://localhost:5001/api/usuario/getbyid/1
