@@ -24,6 +24,13 @@ namespace API.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Carro carro)
         {
+            // var usuario = _context.Usuario.FirstOrDefault(
+            //     usuario = usuario.Id = carro.buyId
+            // );
+            // Usuario Usuario = _context.Usuarios.FirstOrDefault(
+            //     usuario => usuario.Nome == carro.Usuario);
+            // carro.Usuario = usuario;
+
             _context.Carros.Add(carro);
             _context.SaveChanges();
             return Created ("", carro);
@@ -47,7 +54,7 @@ namespace API.Controllers
             return Ok(carro);
         }
 
-        //GET :api/carro/getbyid/1 
+        //GET :api/carro/getbybuyid/1 
         //relacionamento 
         [HttpGet]
         [Route ("getbybuyid/{buyId}")]
@@ -61,44 +68,26 @@ namespace API.Controllers
             return Ok(carros);
         }
 
-
-        //DELETE: api/carro/delete/Fox
-        // [HttpDelete]
-        // [Route("delete/{marca}")]// ver esse name ou marca
-        // public IActionResult Delete ([FromRoute] string marca)
-        // {
-        //     Carro carro = _context.Carros.FirstOrDefault(carro => carro.Marca == marca);
-
-        //     if(carro == null)
-        //     {
-        //         return NotFound();    
-        //     }
-        //     _context.Carros.Remove(carro);
-        //     _context.SaveChanges();
-        //     return Ok(_context.Carros.ToList());
-        // }
-
         [HttpDelete]
-        [Route("delete/{marca}")]
-        public IActionResult Delete([FromRoute] string marca)
+        [Route("delete/{id}")]
+        public IActionResult Delete([FromRoute] int Id)
         {
             //Expressão lambda
             //Buscar um objeto na tabela de produtos com base no nome
-            Carro carro = _context.Carros.FirstOrDefault(carro => carro.Marca == marca);
+            Carro carro = _context.Carros.FirstOrDefault(carro => carro.Id == Id);
 
-            if (carro == null)
-            {
-                return NotFound();
-            }
+            // if (carro == null)
+            // {
+            //     return NotFound();
+            // }
             _context.Carros.Remove(carro);
             _context.SaveChanges();
             return Ok(_context.Carros.ToList());
         }
 
 
-
         //PUT api/carro/update
-        [HttpDelete]
+        [HttpPut]
         [Route("update")]
         public IActionResult Update ([FromBody] Carro carro)
         {

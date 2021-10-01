@@ -72,6 +72,7 @@ namespace API.Controllers
             _context.Usuarios.Update(usuario);
             _context.SaveChanges();
             return Ok(usuario);
-        }
+        }    
     }
 }
+

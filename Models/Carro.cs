@@ -1,4 +1,5 @@
 using System;
+using API.Models;
 
 namespace API.Models
 {
@@ -6,6 +7,7 @@ namespace API.Models
     {
         public Carro() => CriadoEm = DateTime.Now; // pega data/hora atual
         public int Id {get; set;}
+        //public Usuario usuario {get; set;} // relacionamento
         public string Marca {get; set;}
         public double Valor {get; set;}
         public int BuyId {get; set;}  // relacionamento 

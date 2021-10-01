@@ -3,9 +3,9 @@ POST https://localhost:5001/api/carro/create
 Content-Type: application/json
 
 {
-    "Marca" : "gol",
+    "Marca" : "uno",
     "Valor" : 60.000,
-    "buyId": 1
+    "buyId": 60
 }
 
 ###Listar
@@ -15,18 +15,18 @@ GET https://localhost:5001/api/carro/list
 GET https://localhost:5001/api/carro/getbyid/2
 
 
-###Deletar pela marca
-DELETE  https://localhost:5001/api/carro/delete/gol
+###Deletar pelo id
+DELETE  https://localhost:5001/api/carro/delete/2
 
 ###Editar carro
 PUT https://localhost:5001/api/carro/update 
 Content-Type: application/json
 
 {
-    "Id": 2,
-    "Marca": "astra",
+    "Id": 1,
+    "Marca": "gol novo",
     "Valor": 50.000,
-    "buyId": 4
+    "buyId": 898989
 }
 
 ###cadastrar
@@ -34,15 +34,15 @@ POST https://localhost:5001/api/usuario/create
 Content-Type: application/json
 
 {
-    "Nome" : "felipe",
-    "Email": "felipe@com"
+    "Nome" : "fer",
+    "Email": "fer@com"
 }
 
 ###listar
 GET https://localhost:5001/api/usuario/list
 
 ###deletrar pelo nome
-DELETE  https://localhost:5001/api/usuario/delete/felipinho
+DELETE  https://localhost:5001/api/usuario/delete/felipe
 
 ###buscar pelo id
 GET https://localhost:5001/api/usuario/getbyid/1
@@ -52,7 +52,7 @@ PUT https://localhost:5001/api/usuario/update
 Content-Type: application/json
 
 {
-    "Id": 2,
-    "Nome": "felipinho",
-    "Email": "felipe@"
+    "Id": 3,
+    "Nome": "fernanda ",
+    "Email": "feer@"
 }
