@@ -24,7 +24,7 @@ namespace API.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Carro carro)
         {
-            carro.Usuario = _context.Usuarios.Find(carro.Usuario.Id);
+            carro.Usuario = _context.Usuarios.Find(carro.Usuario.Id); // poderia ser UsuarioId
             _context.Carros.Add(carro);
             _context.SaveChanges();
             return Created("", carro);
@@ -34,7 +34,9 @@ namespace API.Controllers
         [HttpGet]
         [Route("list")]
         public IActionResult List() => Ok(_context.Carros
-        .Include(carro => carro.Usuario).ToList());
+        .Include(carro => carro.Usuario)
+        //.Include(carro => carro.Venda) relacionamento e mais classes
+        .ToList());
 
         //GET api/carro/getbyid/1
         [HttpGet]
@@ -56,7 +58,7 @@ namespace API.Controllers
         {
             //Expressão lambda
             //Buscar um objeto na tabela de produtos com base no nome
-            Carro carro = _context.Carros.FirstOrDefault(carro => carro.Id == Id);
+            Carro carro = _context.Carros.FirstOrDefault(carro => carro.BuyId == 1);
 
              if (carro == null)
                 {

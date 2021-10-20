@@ -4,7 +4,7 @@ POST https://localhost:5001/api/usuario/create
 Content-Type: application/json
 
 {
-    "Nome" : "rock",
+    "Nome" : "rooo",
     "Email": "rock@gmail"
 }
 

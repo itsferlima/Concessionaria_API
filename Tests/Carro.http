@@ -3,11 +3,12 @@ POST https://localhost:5001/api/carro/create
 Content-Type: application/json
 
 {
-    "Marca" : "gol",
+    "Marca" : "fiat",
     "Valor" : 550.000,
     "Usuario": { 
-        "Id": 2
-    }
+        "Id": 1
+    },
+    "BuyId": 7845
 }
 
 ###Listar
@@ -28,5 +29,5 @@ Content-Type: application/json
     "Marca": "gol novo",
     "Valor": 50.000,
     "Usuario": { "buyId": 45748485},
-    "buyId": 4587878
+    
 }
