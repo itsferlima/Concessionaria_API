@@ -9,7 +9,6 @@ using Microsoft.EntityFrameworkCore;
 
 namespace API.Controllers
 {
- 
     [ApiController]
     [Route("api/usuario")]
     public class UsuarioController : ControllerBase

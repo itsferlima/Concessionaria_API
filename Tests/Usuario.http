@@ -1,0 +1,28 @@
+
+###cadastrar
+POST https://localhost:5001/api/usuario/create
+Content-Type: application/json
+
+{
+    "Nome" : "rock",
+    "Email": "rock@gmail"
+}
+
+###listar
+GET https://localhost:5001/api/usuario/list
+
+###deletrar pelo id 
+DELETE  https://localhost:5001/api/usuario/delete/1
+
+###buscar pelo id
+GET https://localhost:5001/api/usuario/getbyid/1
+
+###editar
+PUT https://localhost:5001/api/usuario/update
+Content-Type: application/json
+
+{
+    "Id" : 1,
+    "Nome": "fernanda ",
+    "Email": "feer@"
+}

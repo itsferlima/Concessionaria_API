@@ -3,9 +3,11 @@ POST https://localhost:5001/api/carro/create
 Content-Type: application/json
 
 {
-    "Marca" : "uno",
-    "Valor" : 60.000,
-    "buyId": 60
+    "Marca" : "gol",
+    "Valor" : 550.000,
+    "Usuario": { 
+        "Id": 2
+    }
 }
 
 ###Listar
@@ -23,36 +25,8 @@ PUT https://localhost:5001/api/carro/update
 Content-Type: application/json
 
 {
-    "Id": 1,
     "Marca": "gol novo",
     "Valor": 50.000,
-    "buyId": 898989
-}
-
-###cadastrar
-POST https://localhost:5001/api/usuario/create
-Content-Type: application/json
-
-{
-    "Nome" : "fer",
-    "Email": "fer@com"
-}
-
-###listar
-GET https://localhost:5001/api/usuario/list
-
-###deletrar pelo id 
-DELETE  https://localhost:5001/api/usuario/delete/1
-
-###buscar pelo id
-GET https://localhost:5001/api/usuario/getbyid/1
-
-###editar
-PUT https://localhost:5001/api/usuario/update
-Content-Type: application/json
-
-{
-    "Id": 3,
-    "Nome": "fernanda ",
-    "Email": "feer@"
+    "Usuario": { "buyId": 45748485},
+    "buyId": 4587878
 }

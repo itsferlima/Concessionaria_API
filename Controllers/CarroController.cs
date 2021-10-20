@@ -24,22 +24,17 @@ namespace API.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Carro carro)
         {
-            // var usuario = _context.Usuario.FirstOrDefault(
-            //     usuario = usuario.Id = carro.buyId
-            // );
-            // Usuario Usuario = _context.Usuarios.FirstOrDefault(
-            //     usuario => usuario.Nome == carro.Usuario);
-            // carro.Usuario = usuario;
-
+            carro.Usuario = _context.Usuarios.Find(carro.Usuario.Id);
             _context.Carros.Add(carro);
             _context.SaveChanges();
-            return Created ("", carro);
+            return Created("", carro);
         }
 
         //GET: api/carro/list
         [HttpGet]
         [Route("list")]
-        public IActionResult List() => Ok(_context.Carros.ToList());
+        public IActionResult List() => Ok(_context.Carros
+        .Include(carro => carro.Usuario).ToList());
 
         //GET api/carro/getbyid/1
         [HttpGet]
@@ -54,19 +49,6 @@ namespace API.Controllers
             return Ok(carro);
         }
 
-        //GET :api/carro/getbybuyid/1 
-        //relacionamento 
-        [HttpGet]
-        [Route ("getbybuyid/{buyId}")]
-        public IActionResult GetByBuyId([FromRoute] int buyId)
-        {
-            var carros = _context.Carros.Where(carro => carro.BuyId == buyId).ToArray();
-            if(carros.Length ==0)
-            {
-                return NotFound();
-            }
-            return Ok(carros);
-        }
 
         [HttpDelete]
         [Route("delete/{id}")]
@@ -76,10 +58,10 @@ namespace API.Controllers
             //Buscar um objeto na tabela de produtos com base no nome
             Carro carro = _context.Carros.FirstOrDefault(carro => carro.Id == Id);
 
-            // if (carro == null)
-            // {
-            //     return NotFound();
-            // }
+             if (carro == null)
+                {
+                 return NotFound();
+                }
             _context.Carros.Remove(carro);
             _context.SaveChanges();
             return Ok(_context.Carros.ToList());
