@@ -47,14 +47,14 @@ namespace API.Controllers
             return Ok(usuario);
         }
 
-        //DELETE: api/usuario/delete/Felipe
+        //DELETE: api/usuario/delete/1
         [HttpDelete]
-        [Route("delete/{id}")]// ver esse name ou marca
-        public IActionResult Delete ([FromRoute] int Id )
+        [Route("delete/{nome}")]// ver esse name ou marca
+        public IActionResult Delete ([FromRoute] string Nome )
         {
-            Usuario usuario = _context.Usuarios.FirstOrDefault(usuario =>usuario.Id == Id);
+            Usuario usuario = _context.Usuarios.FirstOrDefault(usuario =>usuario.Nome == Nome);
 
-            if(usuario == null)
+            if(usuario == null) 
             {
                 return NotFound();    
             }

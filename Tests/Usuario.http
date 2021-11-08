@@ -4,15 +4,15 @@ POST https://localhost:5001/api/usuario/create
 Content-Type: application/json
 
 {
-    "Nome" : "rooo",
-    "Email": "rock@gmail"
+    "Nome" : "dad",
+    "Email": "dad@gmail"
 }
 
 ###listar
 GET https://localhost:5001/api/usuario/list
 
 ###deletrar pelo id 
-DELETE  https://localhost:5001/api/usuario/delete/1
+DELETE  https://localhost:5001/api/usuario/delete/3
 
 ###buscar pelo id
 GET https://localhost:5001/api/usuario/getbyid/1
@@ -23,6 +23,6 @@ Content-Type: application/json
 
 {
     "Id" : 1,
-    "Nome": "fernanda ",
-    "Email": "feer@"
+    "Nome": "mom simone ",
+    "Email": "simone@"
 }

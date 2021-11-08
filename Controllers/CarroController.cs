@@ -24,7 +24,8 @@ namespace API.Controllers
         [Route("create")]
         public IActionResult Create([FromBody] Carro carro)
         {
-            carro.Usuario = _context.Usuarios.Find(carro.Usuario.Id); // poderia ser UsuarioId
+
+            carro.Usuario = _context.Usuarios.Find(carro.UserId); // poderia ser
             _context.Carros.Add(carro);
             _context.SaveChanges();
             return Created("", carro);
@@ -51,24 +52,21 @@ namespace API.Controllers
             return Ok(carro);
         }
 
-
+        //DELETE: api/carro/delete/1
         [HttpDelete]
-        [Route("delete/{id}")]
-        public IActionResult Delete([FromRoute] int Id)
+        [Route("delete/{id}")]// ver esse name ou marca
+        public IActionResult Delete ([FromRoute] int Id )
         {
-            //Expressão lambda
-            //Buscar um objeto na tabela de produtos com base no nome
-            Carro carro = _context.Carros.FirstOrDefault(carro => carro.BuyId == 1);
+            Carro carro = _context.Carros.FirstOrDefault(carro =>carro.Id == Id);
 
-             if (carro == null)
-                {
-                 return NotFound();
-                }
+            if(carro == null) 
+            {
+                return NotFound();    
+            }
             _context.Carros.Remove(carro);
             _context.SaveChanges();
             return Ok(_context.Carros.ToList());
         }
-
 
         //PUT api/carro/update
         [HttpPut]

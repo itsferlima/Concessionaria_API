@@ -9,10 +9,10 @@ namespace API.Models
         public string Marca {get; set;}
         public double Valor {get; set;}
         public Usuario Usuario {get; set;} // relacionamento
-        public int BuyId {get; set;}  // relacionamento poderia ser UsuarioId
+        public int UserId {get; set;}  // relacionamento poderia ser UsuarioId
         public DateTime CriadoEm {get; set;}
 
         public override string ToString() =>
-        $"Id: {Id} | Marca: {Marca} | Valor: {Valor.ToString("C2")} | ID de compra: {BuyId}  | Criado em: {CriadoEm}";
+        $"Id: {Id} | Marca: {Marca} | Valor: {Valor.ToString("C2")} | ID do usuario: {UserId}  | Criado em: {CriadoEm}";
     }
-}
+} 

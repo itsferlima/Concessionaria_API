@@ -3,12 +3,12 @@ POST https://localhost:5001/api/carro/create
 Content-Type: application/json
 
 {
-    "Marca" : "fiat",
-    "Valor" : 550.000,
+    "Marca" : "uno",
+    "Valor" : 90.000,
     "Usuario": { 
-        "Id": 1
+        
     },
-    "BuyId": 7845
+    "UserId": 1
 }
 
 ###Listar
@@ -17,17 +17,22 @@ GET https://localhost:5001/api/carro/list
 ###Buscar pela ID
 GET https://localhost:5001/api/carro/getbyid/2
 
-
 ###Deletar pelo id
-DELETE  https://localhost:5001/api/carro/delete/2
+DELETE https://localhost:5001/api/carro/delete/3
 
 ###Editar carro
 PUT https://localhost:5001/api/carro/update 
 Content-Type: application/json
 
 {
-    "Marca": "gol novo",
-    "Valor": 50.000,
-    "Usuario": { "buyId": 45748485},
+    "Id":2,
+    "Marca" : "fitat",
+    "Valor" : 50.000,
+    "Usuario": { 
+        "Id" : 2,
+        "Nome": "fernanda ",
+        "Email": "feer@"
+    },
+    "UserId": 1
     
 }
