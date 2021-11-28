@@ -1,0 +1,8 @@
+###Cadastrar 
+POST https://localhost:5001/api/itens/create 
+Content-Type: application/json
+
+{
+    "CarroId" : "2",
+    "Valor": 90.00,
+}
