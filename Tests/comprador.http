@@ -1,0 +1,19 @@
+###Cadastrar 
+POST https://localhost:5001/api/comprador/create 
+Content-Type: application/json
+
+{
+    "Email" : "fer@gmail",
+    "senha" : 1234,
+    "permissao": "adm",
+}
+
+
+### Realizar o login
+GET https://localhost:5001/api/comprador/login
+Content-Type: application/json
+
+{
+    "Email" : "diogo@diogo.com",
+    "Senha" : "123"
+}

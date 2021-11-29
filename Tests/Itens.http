@@ -5,4 +5,5 @@ Content-Type: application/json
 {
     "CarroId" : "2",
     "Valor": 90.00,
+    "CarrinhoId" : "3FGHJ4E3H2GK32",
 }

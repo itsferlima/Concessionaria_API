@@ -32,3 +32,10 @@ C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\obj\Debug\ne
 C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\obj\Debug\net5.0\ref\API.dll
 C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\obj\Debug\net5.0\API.pdb
 C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\obj\Debug\net5.0\API.genruntimeconfig.cache
+C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\bin\Debug\net5.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\bin\Debug\net5.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\bin\Debug\net5.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\bin\Debug\net5.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\bin\Debug\net5.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\USUARIO\Documents\CONTEUDO\SOFT VISUAL\Concessionariaa\API\bin\Debug\net5.0\System.IdentityModel.Tokens.Jwt.dll
